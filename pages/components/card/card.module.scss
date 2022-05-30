@@ -1,0 +1,33 @@
+@import '../../styles/abstracts/abstract.scss';
+
+.card {
+    @include defaultBoxShadow;
+    position: relative;
+    height: 25rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    text-shadow: rgba(#080808, 0.4) 1px 1px 5px;
+    text-align: center;
+
+
+    &_img {z-index: -1;}
+
+    &_details {
+        z-index: 1;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 0.5rem;
+        height: 100%;
+        opacity: 0;
+        background-color: rgba($xPink, 0.8);
+        transition: all 0.15s ease-in;
+
+        &:hover {opacity: 1;}
+    }
+}
+
+.card:hover {
+    .card_details {display: flex;}
+}

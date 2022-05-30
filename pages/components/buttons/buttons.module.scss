@@ -1,0 +1,19 @@
+@import '../../styles/abstracts/abstract.scss';
+
+.moreResults {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 1.2rem;
+    border: 2px solid $xBlack;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+    font-weight: 500;
+    color: $xBlack;
+    background-color: rgba($xWhite, 0.7);
+
+    &:hover {
+        color: $xPink;
+        border: 2px solid $xPink;
+    }
+}

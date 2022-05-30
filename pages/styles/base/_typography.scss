@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+}
+
+.gradient-txt {
+    background-image: linear-gradient(to top right, $xGreen, $xPink, $xYellow);
+    background: -webkit-linear-gradient(to top right, $xGreen, $xPink, $xYellow);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+a, button {
+    text-decoration: none;
+    color: inherit;
+}
+button {font-size: inherit;}
+
+.txt {
+    &_center {text-align: center;}
+    &_16 { font-size: 1.6rem; }
+    &_18 { font-size: 1.8rem; }
+    &_24 { font-size: 2.4rem; }
+    &_36 { font-size: 3.6rem; }
+
+    &_green {color: $xGreen;}
+    &_white {
+        color: $xWhite;
+        text-shadow: rgba(#080808, 0.4) 2px 2px 6px;
+    }
+}

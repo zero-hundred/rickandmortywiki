@@ -1,0 +1,76 @@
+@import '../../styles/abstracts/abstract.scss';
+
+.character {
+    @include absoluteCenter;
+    @include defaultBoxShadow;
+    display: grid;
+    grid-template-columns: repeat(1fr, 3);
+    grid-template-rows: 5rem 1fr 1fr 5rem;
+
+    height: 55rem;
+    width: 35rem;
+    max-width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: rgba($xPink, 0.9);
+
+   
+    &_img, &_name, &_buttons, &_details {
+        grid-column: 1 / span -1;
+    }
+
+    &_name, &_buttons {
+        text-align: center;
+        align-self: center;
+    }
+
+    &_buttons {
+        font-weight: 500;
+        display: flex;
+        justify-content: space-around;
+        
+        button, a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 5rem; width: 100%;
+            border-top: 2px solid rgba( $xYellow, 0.5);
+            transition: all 0.15s ease-in;
+            text-shadow: rgba(#080808, 0.2) 2px 2px 4px;
+
+            &:hover {
+                background-color: $xGreen;
+            }
+        }
+    }
+
+    &_details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 3.5rem;
+    }
+    &_detail {
+        margin: 0.5rem auto;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        &.center {
+            margin-top: 1rem;
+            width: fit-content;
+        }
+
+        &__span {
+            font-weight: 500;
+        }
+    }
+}
+
+.img_container {
+    position: relative;
+    height: 15rem; width: 15rem;
+}

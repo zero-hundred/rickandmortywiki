@@ -1,0 +1,44 @@
+@import '../../styles/abstracts/abstract.scss';
+
+.search {
+    margin: 1rem auto 5rem;
+    display: flex;
+    justify-content: center;
+    max-width: 60rem;
+    position: relative;
+    
+    &_input {
+        padding: 0.5rem 1.5rem;
+        width: 60rem;
+        max-width: 90%;
+        border: 2px solid $xBlack;
+        color: $xPink;
+        font-weight: 500;
+        border-radius: 3rem;
+        background-color: rgba($xWhite, 0.7);
+
+        &::placeholder {color: $xPink; opacity: 0.5;}
+    }
+
+    &_button {
+        z-index: 10;
+        position: absolute;
+        top: 50%; right: 2rem;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        height: 4rem;
+        width: 4rem;
+        display: block;
+        background-color: $xBlack;
+        border: 2px solid $xBlack;
+        cursor: pointer;
+        transition: all 0.15s ease-in;
+        
+        &:hover svg {fill: $xPink;}
+        svg {
+            height: 2rem;
+            width: 2rem;
+            fill: $xYellow;
+        }
+    }
+}
